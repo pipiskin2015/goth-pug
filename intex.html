@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мопсы - БОСС pipiskin2015 тру</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 3px solid #666;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .content {
+            flex: 0 0 60%;
+            text-align: center;
+        }
+        .content img {
+            width: 80%;
+            margin: 10px 0;
+            border: 5px solid #444;
+            border-radius: 10px;
+        }
+        .like-button {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .like-button:hover {
+            background-color: #666;
+        }
+        .like-count {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+        .sidebar {
+            flex: 0 0 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .sidebar iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            font-size: 1em;
+            color: #bbb;
+            border-top: 3px solid #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        создатель этой бомбы БОСС pipiskin2015 тру
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <!-- Смешные картинки мопсов с кнопками лайков -->
+            <div class="photo">
+                <img src="https://i.pinimg.com/736x/88/51/6e/88516eb25d6ea40f33401f912949d440.jpg" alt="Мопс 1">
+                <button class="like-button" onclick="likePhoto(1)">Лайк</button>
+                <div class="like-count" id="like-count-1">0</div>
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/736x/38/d6/f2/38d6f241b09bb30eb9ea2958fc7a8ec8.jpg" alt="Мопс 2">
+                <button class="like-button" onclick="likePhoto(2)">Лайк</button>
+                <div class="like-count" id="like-count-2">0</div>
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/736x/0b/6c/a4/0b6ca423a32216e31c7afaa82f79f081.jpg" alt="Мопс 3">
+                <button class="like-button" onclick="likePhoto(3)">Лайк</button>
+                <div class="like-count" id="like-count-3">0</div>
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/736x/d9/dd/b1/d9ddb1af5eea3dac6c2175ef44c96434.jpg" alt="Мопс 4">
+                <button class="like-button" onclick="likePhoto(4)">Лайк</button>
+                <div class="like-count" id="like-count-4">0</div>
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/736x/a3/6b/1a/a36b1a59e3cce6443b3ba9c043cdd867.jpg" alt="Мопс 5">
+                <button class="like-button" onclick="likePhoto(5)">Лайк</button>
+                <div class="like-count" id="like-count-5">0</div>
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/736x/6b/13/48/6b1348485fbae6e19114cad30ad21c24.jpg" alt="Мопс 6">
+                <button class="like-button" onclick="likePhoto(6)">Лайк</button>
+                <div class="like-count" id="like-count-6">0</div>
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/736x/3f/9e/c9/3f9ec978b92ab482bb39307324e5e853.jpg" alt="Мопс 7">
+                <button class="like-button" onclick="likePhoto(7)">Лайк</button>
+                <div class="like-count" id="like-count-7">0</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <!-- Видео -->
+            <iframe src="ссылка-на-ваше-видео1" title="Видео 1"></iframe>
+            <iframe src="ссылка-на-ваше-видео2" title="Видео 2"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Мопсы - БОСС pipiskin2015 тру
+    </footer>
+
+    <script>
+        function likePhoto(photoId) {
+            let likeCountElement = document.getElementById('like-count-' + photoId);
+            let currentCount = parseInt(likeCountElement.innerText);
+            likeCountElement.innerText = currentCount + 1;
+        }
+    </script>
+</body>
+</html>
